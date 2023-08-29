@@ -1,0 +1,11 @@
+# Ignore .pdfs
+*.pdf
+
+# Tex Generated Files
+*.aux
+*.log
+*.out
+*.gz
+
+# MATLAB generated Files
+*.asv

@@ -1,0 +1,59 @@
+% Command Definitions
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\bes}{\begin{equation*}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ees}{\end{equation*}}
+\newcommand{\bfig}{\begin{figure}[H]}
+\newcommand{\efig}{\end{figure}}
+\newcommand{\bena}{\begin{enumerate}[label=(\alph*)]}
+\newcommand{\benar}{\begin{enumerate}[label=\arabic*.]}
+\newcommand{\benro}{\begin{enumerate}[label=(\roman*)]}
+\newcommand{\een}{\end{enumerate}}
+\newcommand{\makefig}[4]{
+	\bfig
+	\centering
+	\includegraphics[width=#1\textwidth]{#2}
+	\caption{#3}
+	\lb{fig:#4}
+	\efig
+}
+\newcommand{\makefigsbs}[8]{
+	\begin{figure}[H]
+    		\centering
+    		\begin{minipage}{0.45\textwidth}
+        		\centering
+        		\includegraphics[width=#1\textwidth]{#2} % first figure itself
+        		\caption{#3}
+		\label{fig:#4}
+    		\end{minipage}\hfill
+    		\begin{minipage}{0.45\textwidth}
+        		\centering
+        		\includegraphics[width=#5\textwidth]{#6} % second figure itself
+        		\caption{#7}
+		\label{fig:#8}
+    		\end{minipage}
+	\end{figure}
+}
+
+\newcommand{\lb}[1]{\label{#1}}
+
+% Bold shortcuts
+\newcommand{\bm}[1]{\boldsymbol{#1}}
+\newcommand{\un}[1]{\hat{\bm{#1}}}
+\newcommand{\dyad}[1]{\bar{\bar{\mathbf{#1}}}}
+% Math commands
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\q}{\varepsilon}
+
+% References
+\newcommand{\eq}[1]{Eq \ref{eq:#1}}
+\newcommand{\eqq}[2]{Eqs \ref{eq:#1} and \ref{eq:#2}}
+\newcommand{\fig}[1]{Figure \ref{fig:#1}}
+\newcommand{\figg}[2]{Figures \ref{fig:#1} and \ref{fig:#2}}
+\newcommand{\figgg}[3]{Figures \ref{fig:#1}, \ref{fig:#2}, and \ref{fig:#3}}
+\newcommand{\tab}[1]{Table \ref{table:#1}}
+\newcommand{\tabb}[2]{Tables \ref{table:#1} and \ref{table:#2}}
+\newcommand{\app}[1]{Appendix \ref{app:#1}}
+\newcommand{\sect}[1]{Section \ref{sec:#1}}

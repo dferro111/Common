@@ -1,0 +1,68 @@
+% Formatting
+
+% Packages
+\usepackage{geometry}
+\usepackage{gensymb}
+\usepackage{enumitem} % Enumeration lists
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{nameref}
+\usepackage[numbered,autolinebraks,useliterate]{mcode}
+\usepackage{chngcntr}
+\usepackage{wrapfig}
+
+% Format header
+\pagestyle{fancy}
+\fancyhead[L]{\classnumber\\\hw}
+\fancyhead[R]{Dominic Ferro\\\datedone}
+\fancyfoot[C]{\thepage}
+
+% Change Section naming scheme
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+\setcounter{secnumdepth}{3}
+
+% Removes intentations from paragraphs
+\setlength{\parskip}{5pt}
+%\setlength{\parindent}{0pt}
+
+% Change the numbering scheme for equations, figures, and tables
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+\renewcommand{\thetable}{\arabic{section}.\arabic{table}}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+
+% Change counter to reset in new sections
+\counterwithin*{equation}{section}
+\counterwithin*{figure}{section}
+\counterwithin*{table}{section}
+
+% Make nested delimiters look nice
+\delimitershortfall=-1pt
+
+% Create definitions for the astronomical symbols
+% mathabx definitions
+\newcommand*{\mathabxbfamily}{\fontencoding{U}\fontfamily{mathb}\selectfont}
+\DeclareFontFamily{U}{mathb}{\hyphenchar\font45}
+\DeclareFontShape{U}{mathb}{m}{n}{
+      <5> <6> <7> <8> <9> <10> gen * mathb
+      <10.95> mathb10 <12> <14.4> <17.28> <20.74> <24.88> mathb12
+      }{}
+\newcommand*{\Sun}{{\text{\mathabxbfamily\char"40}}}
+\newcommand*{\Mercury}{{\text{\mathabxbfamily\char"41}}}
+\newcommand*{\Venus}{{\text{\mathabxbfamily\char"42}}}
+\newcommand*{\Earth}{{\text{\mathabxbfamily\char"43}}}
+\newcommand*{\Mars}{{\text{\mathabxbfamily\char"44}}}
+\newcommand*{\Jupiter}{{\text{\mathabxbfamily\char"45}}}
+\newcommand*{\Saturn}{{\text{\mathabxbfamily\char"46}}}
+\newcommand*{\Uranus}{{\text{\mathabxbfamily\char"47}}}
+\newcommand*{\Neptune}{{\text{\mathabxbfamily\char"48}}}
+\newcommand*{\Pluto}{{\text{\mathabxbfamily\char"49}}}
+\newcommand*{\Moon}{{\text{\mathabxbfamily\char'113}}}

@@ -1,0 +1,14 @@
+% Appendix Formatting
+
+\setcounter{secnumdepth}{3}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\Alph{section}.\arabic{subsection}.\arabic{subsubsection}}
+
+% Change the numbering scheme for equations, figures, and tables
+\renewcommand{\theequation}{\Alph{section}.\arabic{equation}}
+\renewcommand{\thetable}{\Alph{section}.\arabic{table}}
+\renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+
+\newcommand{\ccode}[1]{\subsection{\mcode{#1}}\lstinputlisting{../../Common/code/#1}}
+\newcommand{\code}[1]{\subsection{\mcode{#1}}\lstinputlisting{code/#1}}
